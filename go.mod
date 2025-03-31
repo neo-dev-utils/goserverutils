@@ -5,6 +5,7 @@ go 1.24.1
 replace gocommutils => ../gocommutils
 
 require (
+	github.com/gorilla/websocket v1.5.3
 	github.com/redis/go-redis/v9 v9.7.3
 	gocommutils v0.0.0-00010101000000-000000000000
 	gorm.io/driver/mysql v1.5.7
