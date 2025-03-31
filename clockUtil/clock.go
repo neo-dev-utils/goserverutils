@@ -5,8 +5,6 @@ import (
 	"gocommutils/timeUtil"
 	"sync"
 	"time"
-
-	"github.com/pingcap/log"
 )
 
 const (
@@ -67,7 +65,7 @@ func (c *Clock) Start() {
 				c.goWait.Add(1)
 				go func() {
 					if job.keyType != 0 {
-						log.Debug("-->>>>> Clock-Start 处理")
+						// log.Debug("-->>>>> Clock-Start 处理")
 					}
 					defer c.goWait.Done()
 					job.callBackFunc(job.param)
