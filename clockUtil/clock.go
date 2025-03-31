@@ -1,7 +1,6 @@
 package clockUtil
 
 import (
-	// "common/log"
 	"gocommutils/timeUtil"
 	"sync"
 	"time"
