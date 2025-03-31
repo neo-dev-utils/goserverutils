@@ -22,7 +22,7 @@ type Option struct {
 
 func ConnectRedis(opt Option) *redis.Client {
 
-	gClient := redis.NewClient(&redis.Options{
+	client := redis.NewClient(&redis.Options{
 		//连接信息
 		Network:  opt.Network,             //网络类型，tcp or unix，默认tcp
 		Addr:     opt.Ip + ":" + opt.Port, //主机名+冒号+端口，默认localhost:6379
@@ -40,10 +40,10 @@ func ConnectRedis(opt Option) *redis.Client {
 		PoolTimeout:  4 * time.Second, //当所有连接都处在繁忙状态时，客户端等待可用连接的最大等待时长，默认为读超时+1秒。
 	})
 
-	_, err := gClient.Ping(context.Background()).Result()
+	_, err := client.Ping(context.Background()).Result()
 	if err != nil {
 		panic("Connect rdb error:\n" + err.Error())
 	}
 
-	return gClient
+	return client
 }
