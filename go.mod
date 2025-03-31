@@ -5,6 +5,7 @@ go 1.24.1
 replace gocommutils => ../gocommutils
 
 require (
+	github.com/redis/go-redis/v9 v9.7.3
 	gocommutils v0.0.0-00010101000000-000000000000
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/driver/postgres v1.5.11
@@ -12,6 +13,8 @@ require (
 )
 
 require (
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/dromara/carbon/v2 v2.5.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
