@@ -1,7 +1,3 @@
-/*
-*作者：唐杰
-*说明：通过gob读取数据
- */
 package io
 
 import (

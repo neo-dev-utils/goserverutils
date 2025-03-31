@@ -1,7 +1,4 @@
-/*
-*作者：唐杰
-*说明：启动一个简单的tcp服务
- */
+
 package tcp
 
 import (
